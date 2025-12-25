@@ -1,5 +1,5 @@
 {
-  "name": "oasis.site",
+  "name": "oasis.web",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
+    "rxpress": "^0.3.0"
   }
 }

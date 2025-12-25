@@ -3,91 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Result - Oasis Science Academy</title>
-    <link rel="stylesheet" href="my-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="result-page-body">
-    <div class="result-container">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        
-        <div class="result-card">
-            <h2>Check Your Result</h2>
-            <p>Enter your Roll Number to see your performance</p>
-            
-            <div class="search-box">
-                <input type="text" id="rollNumberInput" placeholder="Enter Roll Number (e.g. 101)...">
-                <button class="cta-button" onclick="checkResult()">Search</button>
-            </div>
-
-            <div id="resultDisplay" style="display: none;">
-                <h3 id="studentName" style="margin-bottom: 10px; color: #001f3f;"></h3>
-                <div class="result-table-wrapper">
-                    <table class="result-table">
-                        <thead>
-                            <tr>
-                                <th>Subject</th>
-                                <th>Total</th>
-                                <th>Obtained</th>
-                                <th>Grade</th>
-                            </tr>
-                        </thead>
-                        <tbody id="resultTableBody">
-                            </tbody>
-                    </table>
-                </div>
-            </div>
-            <p id="errorMsg" style="color: red; display: none; margin-top: 10px;">Roll number not found!</p>
-        </div>
-    </div>
-
-    <script>
-        // Students ka data (Aap mazeed students yahan add kar sakte hain)
-        const studentsData = {
-            "101": {
-                name: "Ammar Hassan",
-                results: [
-                    { sub: "Physics", total: 100, obtd: 85, grade: "A" },
-                    { sub: "Maths", total: 100, obtd: 95, grade: "A+" }
-                ]
-            },
-            "102": {
-                name: "Ali Ahmed",
-                results: [
-                    { sub: "Physics", total: 100, obtd: 70, grade: "B" },
-                    { sub: "Maths", total: 100, obtd: 88, grade: "A" }
-                ]
-            }
-        };
-
-        function checkResult() {
-            const roll = document.getElementById("rollNumberInput").value;
-            const display = document.getElementById("resultDisplay");
-            const error = document.getElementById("errorMsg");
-            const tableBody = document.getElementById("resultTableBody");
-            const nameHeader = document.getElementById("studentName");
-
-            if (studentsData[roll]) {
-                display.style.display = "block";
-                error.style.display = "none";
-                nameHeader.innerText = "Student: " + studentsData[roll].name;
-                
-                tableBody.innerHTML = ""; // Purana data clear karein
-                studentsData[roll].results.forEach(item => {
-                    tableBody.innerHTML += `
-                        <tr>
-                            <td>${item.sub}</td>
-                            <td>${item.total}</td>
-                            <td>${item.obtd}</td>
-                            <td>${item.grade}</td>
-                        </tr>
-                    `;
-                });
-            } else {
-                display.style.display = "none";
-                error.style.display = "block";
-            }
+    <title>Select Class - Oasis Academy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-    </script>
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h2 { color: #001f3f; margin-bottom: 25px; }
+        .btn-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .class-btn {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #001f3f;
+            background: #ffcc00;
+            border-radius: 12px;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .class-btn:hover {
+            background: #e6b800;
+            transform: translateY(-3px);
+        }
+        .back-home {
+            margin-top: 20px;
+            display: inline-block;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Apni Class Select Karein</h2>
+    <div class="btn-box">
+        <a href="9th-result.html" class="class-btn">9th Class Result</a>
+        <a href="10th-result.html" class="class-btn">10th Class Result</a>
+    </div>
+    <a href="index.html" class="back-home">← Back to Home</a>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th Class Result - Oasis Academy</title>
+    <style>
+        body {
+            margin: 0; font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5; display: flex;
+            justify-content: center; align-items: center; height: 100vh;
+        }
+        .result-card {
+            background: white; padding: 40px 30px;
+            border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 90%; max-width: 350px; text-align: center;
+        }
+        .badge {
+            background: #001f3f; color: #ffcc00;
+            padding: 5px 15px; border-radius: 50px;
+            font-size: 12px; font-weight: bold; text-transform: uppercase;
+        }
+        h2 { color: #333; margin: 15px 0; }
+        input {
+            width: 100%; padding: 15px; margin: 20px 0;
+            border: 2px solid #ddd; border-radius: 10px;
+            font-size: 16px; box-sizing: border-box; outline: none;
+        }
+        input:focus { border-color: #001f3f; }
+        .check-btn {
+            width: 100%; padding: 15px; border: none;
+            background: #ffcc00; color: #001f3f;
+            font-size: 18px; font-weight: bold;
+            border-radius: 10px; cursor: pointer; transition: 0.3s;
+        }
+        .check-btn:hover { background: #e6b800; transform: scale(1.02); }
+        .back-link { display: block; margin-top: 20px; color: #666; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="result-card">
+    <span class="badge">Session 2024-25</span>
+    <h2>9th Class Result</h2>
+    <p>Enter your Roll Number to see marks</p>
+    
+    <form>
+        <input type="number" placeholder="Roll Number e.g. 123456" required>
+        <button type="submit" class="check-btn">View Result</button>
+    </form>
+
+    <a href="results.html" class="back-link">← Go Back</a>
+</div>
+</body>
+</html>

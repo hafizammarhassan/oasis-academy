@@ -430,3 +430,173 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Style */
+.navbar {
+    background-color: #001f3f; /* Dark Navy Blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section Style */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1523050853063-bd80e27433fb?q=80&w=1000'); /* Education related image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #ffcc00; /* Golden Yellow */
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Professional Button */
+.btn-result {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Capsule shape */
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+.btn-result:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+}
+.selection-body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.container h2 {
+    color: #001f3f;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.selection-cards {
+    display: flex;
+    flex-direction: column; /* Mobile par upar niche dikhen ge */
+    gap: 20px;
+}
+
+.class-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    border-left: 5px solid #ffcc00; /* Yellow accent line */
+}
+
+.class-card:active {
+    transform: scale(0.95); /* Click karne par chota hoga */
+}
+
+.icon {
+    font-size: 30px;
+    font-weight: bold;
+    color: #001f3f;
+    margin-bottom: 10px;
+}
+
+.class-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.class-card span {
+    color: #001f3f;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.back-link {
+    display: block;
+    margin-top: 30px;
+    color: #001f3f;
+    text-decoration: underline;
+}
+.result-btn {
+    display: inline-block;
+    background-color: #ffcc00; /* Golden Yellow */
+    color: #001f3f;           /* Dark Navy Blue Text */
+    padding: 12px 40px;       /* Top-bottom and Left-right padding */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;      /* Isse capsule shape banti hai */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffcc00;
+}
+
+/* Jab mouse button par jaye (Hover effect) */
+.result-btn:hover {
+    background-color: transparent;
+    color: #ffcc00;
+    transform: translateY(-3px); /* Button thoda upar uthega */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

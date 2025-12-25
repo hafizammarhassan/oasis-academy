@@ -369,3 +369,64 @@ header {
         padding: 5px 10px;
     }
 }
+/* Result Page Styling */
+.result-page-body {
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.result-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.result-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.result-table th, .result-table td {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.result-table th {
+    background-color: #001f3f;
+    color: white;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #001f3f;
+    text-decoration: none;
+    font-weight: bold;
+}

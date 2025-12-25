@@ -3,39 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Portal - Oasis Academy Liart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> </head>
-<body>
-    <h1>Result Announcement</h1>
-    
-    <video controls width="640" height="360" muted autoplay>
-        <source src="https://res.cloudinary.com/de2lceakv/video/upload/v1765745732/sample_elesoz.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-<body>
-<body>
-
-    <header class="main-header">
-        </header>
-
-    <main style="padding: 40px; text-align: center;">
-        <h1>Important Announcement Video</h1>
-        <p>Please watch this video before proceeding to check your results.</p>
+    <title>Student Result - Oasis Science Academy</title>
+    <link rel="stylesheet" href="my-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="result-page-body">
+    <div class="result-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
         
-        <div style="max-width: 800px; margin: 30px auto;">
-            <video width="100%" height="auto" controls autoplay muted>
-                <source src="path/to/your/school_video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="result-card">
+            <h2>Check Your Result</h2>
+            <p>Enter your Roll Number to see your performance</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Enter Roll Number (e.g. 101)...">
+                <button class="cta-button">Search</button>
+            </div>
+
+            <div class="result-table-wrapper">
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Total Marks</th>
+                            <th>Obtained Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Physics</td>
+                            <td>100</td>
+                            <td>85</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Chemistry</td>
+                            <td>100</td>
+                            <td>78</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics</td>
+                            <td>100</td>
+                            <td>92</td>
+                            <td>A+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <a href="#" class="cta-button" style="background-color: #1A374D;">Proceed to Check Results</a>
-
-    </main>
-
-    <footer class="main-footer">
-        </footer>
-
+    </div>
 </body>
 </html>

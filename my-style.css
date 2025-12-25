@@ -329,3 +329,43 @@ header {
     background-color: #001f3f; /* Dark Blue background */
     padding: 10px 0;
 }
+/* Mobile Responsive Header Fix */
+@media (max-width: 768px) {
+    .nav-content {
+        display: flex;
+        flex-direction: column; /* Mobile par logo upar aur menu niche */
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    .logo-area {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .logo-image {
+        height: 40px !important; /* Mobile par logo thora chota */
+    }
+
+    .logo-text {
+        font-size: 18px !important; /* Mobile par font size fit karne ke liye */
+        text-align: center;
+        white-space: nowrap; /* Naam do line mein na tute */
+    }
+
+    .main-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .main-menu ul li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

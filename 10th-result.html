@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10th Class Result - Oasis Academy</title>
-    <style>
-   <script>
+    <script>
     // Form submit hone par function chalega
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault(); // Page refresh hone se rokne ke liye
@@ -19,8 +17,10 @@
         // Result par focus karne ke liye scroll
         resultBox.scrollIntoView({ behavior: 'smooth' });
     });
-</script>     
-body {
+</script>
+<title>9th Class Result - Oasis Academy</title>
+    <style>
+        body {
             margin: 0; font-family: 'Segoe UI', sans-serif;
             background: #f0f2f5; display: flex;
             justify-content: center; align-items: center; height: 100vh;
@@ -55,16 +55,17 @@ body {
 <body>
 
 <div class="result-card">
-    <span class="badge">Session 2024-25</span>
+    <span class="badge">Session 2023-26</span>
     <h2>10th Class Result</h2>
     <p>Enter Your Roll Number to see Marks</p>
     
-    <form>
+ <form>
         <input type="number" placeholder="Roll Number e.g. 123456" required>
         <button type="submit" class="check-btn">View Result</button>
     </form>
 
     <a href="results.html" class="back-link">← Go Back</a>
 </div>
+
 </body>
 </html>

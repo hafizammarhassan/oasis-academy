@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10th Class Result - Oasis Academy</title>
     <style>
-        body {
+   <script>
+    // Form submit hone par function chalega
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Page refresh hone se rokne ke liye
+        
+        // Result table wali div ko dhundna (Iski ID 'resultBox' honi chahiye)
+        var resultBox = document.getElementById('resultBox');
+        
+        // Agar roll number field khali nahi hai to table dikhao
+        resultBox.style.display = 'block';
+        
+        // Result par focus karne ke liye scroll
+        resultBox.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>     
+body {
             margin: 0; font-family: 'Segoe UI', sans-serif;
             background: #f0f2f5; display: flex;
             justify-content: center; align-items: center; height: 100vh;
@@ -41,8 +56,8 @@
 
 <div class="result-card">
     <span class="badge">Session 2024-25</span>
-    <h2>9th Class Result</h2>
-    <p>Enter your Roll Number to see marks</p>
+    <h2>10th Class Result</h2>
+    <p>Enter Your Roll Number to see Marks</p>
     
     <form>
         <input type="number" placeholder="Roll Number e.g. 123456" required>

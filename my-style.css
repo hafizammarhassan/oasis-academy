@@ -303,3 +303,29 @@ footer {
         padding-left: 0;
     }
 }
+/* Logo aur Naam ko ek line mein laane ke liye */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Logo aur naam ke darmiyan fasla */
+}
+
+.logo-image {
+    height: 50px; /* Aap apni marzi se chota bara kar sakte hain */
+    width: auto;
+}
+
+.logo-text {
+    color: #ffffff !important; /* Naam ko white karne ke liye */
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Header ka background agar dark hai toh ye zaroori hai */
+header {
+    background-color: #001f3f; /* Dark Blue background */
+    padding: 10px 0;
+}

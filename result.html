@@ -16,43 +16,78 @@
             <p>Enter your Roll Number to see your performance</p>
             
             <div class="search-box">
-                <input type="text" placeholder="Enter Roll Number (e.g. 101)...">
-                <button class="cta-button">Search</button>
+                <input type="text" id="rollNumberInput" placeholder="Enter Roll Number (e.g. 101)...">
+                <button class="cta-button" onclick="checkResult()">Search</button>
             </div>
 
-            <div class="result-table-wrapper">
-                <table class="result-table">
-                    <thead>
-                        <tr>
-                            <th>Subject</th>
-                            <th>Total Marks</th>
-                            <th>Obtained Marks</th>
-                            <th>Grade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Physics</td>
-                            <td>100</td>
-                            <td>85</td>
-                            <td>A</td>
-                        </tr>
-                        <tr>
-                            <td>Chemistry</td>
-                            <td>100</td>
-                            <td>78</td>
-                            <td>B</td>
-                        </tr>
-                        <tr>
-                            <td>Mathematics</td>
-                            <td>100</td>
-                            <td>92</td>
-                            <td>A+</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div id="resultDisplay" style="display: none;">
+                <h3 id="studentName" style="margin-bottom: 10px; color: #001f3f;"></h3>
+                <div class="result-table-wrapper">
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Total</th>
+                                <th>Obtained</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTableBody">
+                            </tbody>
+                    </table>
+                </div>
             </div>
+            <p id="errorMsg" style="color: red; display: none; margin-top: 10px;">Roll number not found!</p>
         </div>
     </div>
+
+    <script>
+        // Students ka data (Aap mazeed students yahan add kar sakte hain)
+        const studentsData = {
+            "101": {
+                name: "Ammar Hassan",
+                results: [
+                    { sub: "Physics", total: 100, obtd: 85, grade: "A" },
+                    { sub: "Maths", total: 100, obtd: 95, grade: "A+" }
+                ]
+            },
+            "102": {
+                name: "Ali Ahmed",
+                results: [
+                    { sub: "Physics", total: 100, obtd: 70, grade: "B" },
+                    { sub: "Maths", total: 100, obtd: 88, grade: "A" }
+                ]
+            }
+        };
+
+        function checkResult() {
+            const roll = document.getElementById("rollNumberInput").value;
+            const display = document.getElementById("resultDisplay");
+            const error = document.getElementById("errorMsg");
+            const tableBody = document.getElementById("resultTableBody");
+            const nameHeader = document.getElementById("studentName");
+
+            if (studentsData[roll]) {
+                display.style.display = "block";
+                error.style.display = "none";
+                nameHeader.innerText = "Student: " + studentsData[roll].name;
+                
+                tableBody.innerHTML = ""; // Purana data clear karein
+                studentsData[roll].results.forEach(item => {
+                    tableBody.innerHTML += `
+                        <tr>
+                            <td>${item.sub}</td>
+                            <td>${item.total}</td>
+                            <td>${item.obtd}</td>
+                            <td>${item.grade}</td>
+                        </tr>
+                    `;
+                });
+            } else {
+                display.style.display = "none";
+                error.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
